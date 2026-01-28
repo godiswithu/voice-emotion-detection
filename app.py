@@ -5,9 +5,9 @@ import joblib
 
 st.set_page_config(page_title="Voice Emotion Detection", layout="centered")
 
-st.title("🎙 Voice Emotion Detection")
+st.title(" Voice Emotion Detection")
 
-# Load trained model
+
 model = joblib.load("model/emotion_model.pkl")
 encoder = joblib.load("model/label_encoder.pkl")
 
@@ -26,4 +26,5 @@ if uploaded_file is not None:
         prediction = model.predict(features)
         emotion = encoder.inverse_transform(prediction)
 
-        st.success(f"🎯 Detected Emotion: **{emotion[0]}**")
+        st.success(f" Detected Emotion: **{emotion[0]}**")
+
